@@ -11,7 +11,7 @@ const Movies = () => (
       {movies.map((movie, i) => (
         <div key={i}>
           <div className="movie-image">
-            <Link to={`/Movies/${movie.id}`}>
+            <Link to={`/movies/${movie.id}`}>
               <img alt={movie.name} src={movie.image} />
             </Link>
           </div>

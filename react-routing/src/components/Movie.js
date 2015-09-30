@@ -47,7 +47,7 @@ const Movie = ({ params: { movieId } }) => {
     </div>
   );
 };
-// movies: PropTypes.arrayOf(Movie)
+
 Movie.PropTypes = {
   params: PropTypes.shape({
     movieId: PropTypes.string.isRequired

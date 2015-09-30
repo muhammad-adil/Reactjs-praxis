@@ -26,7 +26,7 @@ export default class App extends Component {
               </li>
 
               <li className="nav-item">
-                <Link className="nav-link" to="/Movies">
+                <Link className="nav-link" to="/movies">
                   Movies
                 </Link>
               </li>
@@ -40,8 +40,8 @@ export default class App extends Component {
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route strict path="/Movies" component={Movies} />
-              <Route exact path="/Movies/:id" component={Movie} />
+              <Route strict path="/movies" component={Movies} />
+              <Route strict path="/movies/:id" component={Movie} />
               <Route component={PageNotFound} />
             </Switch>
           </div>
