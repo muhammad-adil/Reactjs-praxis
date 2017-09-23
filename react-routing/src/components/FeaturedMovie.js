@@ -1,6 +1,6 @@
 import React from "react";
 import PropTypes from "prop-types";
-
+import { BrowserRouter as Router, Route, Link } from "react-router-dom";
 import { BrowserRouter as Link } from "react-router-dom";
 
 const FeaturedMovie = ({ movie }) => (
@@ -20,8 +20,6 @@ const FeaturedMovie = ({ movie }) => (
     </div>
   </div>
 );
-
-// movies: PropTypes.arrayOf(FeaturedMovie);
 
 FeaturedMovie.PropTypes = {
   movie: PropTypes.shape({

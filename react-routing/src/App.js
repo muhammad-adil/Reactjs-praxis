@@ -5,13 +5,9 @@ import "./App.css";
 import Home from "./components/Home";
 import Movie from "./components/Movie";
 import Movies from "./components/Movies";
-// import Login from './components/Login';
-// import PageNotFound from './components/PageNotFound';
+import PageNotFound from "./components/PageNotFound";
 
-// import Router from "react-router-dom/BrowserRouter";
-//import Link from "react-router-dom/Link";
-import Match from "react-router-dom/matchPath";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
 class App extends Component {
   render() {
@@ -20,19 +16,30 @@ class App extends Component {
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
+
             <h1 className="App-title">Movie Routing App</h1>
-            <Link to="/">Home</Link>&nbsp;
-            <Link to="/movies">Movies</Link>
+            <ul className="nav justify-content-center">
+              <li className="nav-item">
+                <Link className="nav-link active" to="/">
+                  Home
+                </Link>
+              </li>
+              <li className="nav-item">
+                <Link className="nav-link" to="/movies">
+                  Movies
+                </Link>
+              </li>
+            </ul>
           </header>
 
-          <div className="container App-intro">
-            <Match exactly pattern="/" component={Home} />
-            <Match exactly pattern="/movies" component={Movies} />
-            <Match pattern="/movies/:movieId" component={Movie} />
+          <div className="container">
+            <Switch>
+              <Route exact path="/" component={Home} />
+              <Route strict path="/movies" component={Movies} />
+              <Route strict path="/movies/:id" component={Movie} />
+              <Route component={PageNotFound} />
+            </Switch>
           </div>
-          {/* <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p> */}
         </div>
       </Router>
     );

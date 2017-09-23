@@ -6,6 +6,10 @@
   animation: App-logo-spin infinite 20s linear;
   height: 80px;
 }
+ul,
+li {
+  text-decoration: none;
+}
 
 .App-header {
   background-color: #222;
