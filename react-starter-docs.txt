@@ -27,9 +27,9 @@ npm install prop-types
 npm start
 
 learn ={
-	props
-	events
-	state
+	props: props are just like attribute in html
+	events:
+	state: is a reference intation of all of your component's data, one big object that holds all the information thats related your component, its a master copy of all of your data
 };
 
 
@@ -37,11 +37,11 @@ learn ={
 
 1. componentWillMount 			immediately before initial rendering
 2. componentDidMount  			immediately after initial rendering
-3. componentwillrecieveprops	When component recieves new props 
-4. shouldcomponentupdate		before rendering, afer receiving new props or state
+3. componentwillRecieveProps	When component recieves new props 
+4. shouldComponentUpdate		before rendering, afer receiving new props or state
 5. componentWillUpdate			before rendering, after receiving new props or state
 6. componentDidUpdate			after component's updates are flushed to DOM
-7. componentWillUnmount		immediately before removing component from DOM
+7. componentWillUnmount			immediately before removing component from DOM
 
 
 

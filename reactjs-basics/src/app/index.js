@@ -80,7 +80,7 @@ class App extends React.Component {
     );
   }
 }
-render(
+ReactDOM.render(
   <BrowserRouter>
     <Route path="/" component={App} />
   </BrowserRouter>,
