@@ -41,7 +41,7 @@ learn ={
 4. shouldcomponentupdate		before rendering, afer receiving new props or state
 5. componentWillUpdate			before rendering, after receiving new props or state
 6. componentDidUpdate			after component's updates are flushed to DOM
-7. componentWillUnmount		immediately before removing component from DOM
+7. componentWillUnmount			immediately before removing component from DOM
 
 
 
