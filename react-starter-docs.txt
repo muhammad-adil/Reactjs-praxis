@@ -33,15 +33,15 @@ learn ={
 };
 
 
-lifecycles Hooks
+#### lifecycles Hooks
 
-componentWillMount 			immediately before initial rendering
-componentDidMount  			immediately after initial rendering
-componentwillrecieveprops	When component recieves new props 
-shouldcomponentupdate		before rendering, afer receiving new props or state
-componentWillUpdate			before rendering, after receiving new props or state
-componentDidUpdate			after component's updates are flushed to DOM
-componentWillUnmount		immediately before removing component from DOM
+1. componentWillMount 			immediately before initial rendering
+2. componentDidMount  			immediately after initial rendering
+3. componentwillrecieveprops	When component recieves new props 
+4. shouldcomponentupdate		before rendering, afer receiving new props or state
+5. componentWillUpdate			before rendering, after receiving new props or state
+6. componentDidUpdate			after component's updates are flushed to DOM
+7. componentWillUnmount		immediately before removing component from DOM
 
 
 
