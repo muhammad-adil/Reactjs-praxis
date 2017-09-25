@@ -1,5 +1,4 @@
 // console.log("It works, React works!!!!");
-
 import React from "react";
 import { render } from "react-dom";
 
@@ -8,6 +7,11 @@ import { Header } from "./components/Header";
 
 class App extends React.Component {
   render() {
+    var user = {
+      name: "Anna",
+      hobbies: ["sports", "Driving", "Love"]
+    };
+
     return (
       <div className="container">
         <div className="row">
@@ -18,8 +22,16 @@ class App extends React.Component {
 
         <div className="row">
           <div className="col-xs-10 col-xs-offset-1">
-            <h1>Hello World!</h1>
-            <Home />
+            <h1>Welcome To The React World!</h1>
+            {/* <Home /> */}
+          </div>
+        </div>
+
+        <div className="row">
+          <div className="col-xs-10 col-xs-offset-1">
+            <Home name={"MaXx"} age={20} user={user}>
+              <p>this is a paragraph</p>
+            </Home>
           </div>
         </div>
       </div>
