@@ -47,3 +47,10 @@ learn ={
 
 
 
+Routing
+
+https://css-tricks.com/learning-react-router/
+https://css-tricks.com/react-router-4/
+
+
+

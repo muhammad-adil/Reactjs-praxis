@@ -1,6 +1,7 @@
 // console.log("It works, React works!!!!");
 import React from "react";
-import { render } from "react-dom";
+import ReactDOM, { render } from "react-dom";
+import { BrowserRouter, Route } from "react-router-dom";
 
 import { Home } from "./components/Home";
 import { Header } from "./components/Header";
@@ -79,4 +80,9 @@ class App extends React.Component {
     );
   }
 }
-render(<App />, window.document.getElementById("app"));
+render(
+  <BrowserRouter>
+    <Route path="/" component={App} />
+  </BrowserRouter>,
+  window.document.getElementById("app")
+);
