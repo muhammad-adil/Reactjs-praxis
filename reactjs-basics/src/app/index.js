@@ -56,6 +56,7 @@ class App extends React.Component {
               initialStatus={0}
               user={user}
               changeLink={this.onChangeLinkName.bind(this)}
+              initialLinkName={this.state.homeLink}
             >
               <p>this is a paragraph</p>
             </Home>

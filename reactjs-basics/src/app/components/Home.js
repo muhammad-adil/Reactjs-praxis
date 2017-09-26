@@ -7,7 +7,7 @@ export class Home extends Component {
     this.state = {
       age: props.initialAge,
       status: props.initialStatus,
-      homeLink: "Changed Link"
+      homeLink: props.initialLinkName
     };
   }
 
@@ -22,6 +22,12 @@ export class Home extends Component {
 
   onChangeLink() {
     this.props.changeLink(this.state.homeLink);
+  }
+
+  onHandleChange(event) {
+    this.setState({
+      homeLink: event.target.value
+    });
   }
 
   render() {
@@ -46,6 +52,12 @@ export class Home extends Component {
           Don't Touch
         </button>
         &nbsp;
+        <input
+          type="text"
+          name="two-way"
+          value={this.state.homeLink}
+          onChange={event => this.onHandleChange(event)}
+        />
         <button
           onClick={this.onChangeLink.bind(this)}
           className="btn btn-primary btn-sm"
@@ -75,7 +87,8 @@ export class Home extends Component {
 Home.propTypes = {
   name: React.PropTypes.string,
   initialAge: React.PropTypes.number.isRequired,
-  greet: React.PropTypes.func
+  greet: React.PropTypes.func,
+  initialLinkName: React.PropTypes.string
   // user: React.PropTypes.object,
   // children: React.PropTypes.element.isRequired
 };
