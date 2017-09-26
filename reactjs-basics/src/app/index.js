@@ -29,7 +29,7 @@ class App extends React.Component {
 
         <div className="row">
           <div className="col-xs-10 col-xs-offset-1">
-            <Home name={"MaXx"} age={20} user={user}>
+            <Home name={"MaXx"} initialAge={20} user={user}>
               <p>this is a paragraph</p>
             </Home>
           </div>
