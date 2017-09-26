@@ -36,6 +36,9 @@ export class Home extends Component {
           className="btn btn-primary btn-sm"
         >
           Make Me Older
+        </button>&nbsp;
+        <button onClick={this.props.greet} className="btn btn-primary btn-sm">
+          Don't Touch
         </button>
         {/*  props work*/}
         <p>
@@ -60,6 +63,7 @@ export class Home extends Component {
 Home.propTypes = {
   name: React.PropTypes.string,
   initialAge: React.PropTypes.number.isRequired,
-  user: React.PropTypes.object,
-  children: React.PropTypes.element.isRequired
+  greet: React.PropTypes.func
+  // user: React.PropTypes.object,
+  // children: React.PropTypes.element.isRequired
 };

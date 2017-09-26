@@ -8,6 +8,9 @@ import { Sidebar } from "./components/Sidebar";
 import { Footer } from "./components/Footer";
 
 class App extends React.Component {
+  onGreet() {
+    alert("Hello From Papa Parent Component");
+  }
   render() {
     var user = {
       name: "Anna",
@@ -25,14 +28,21 @@ class App extends React.Component {
         <div className="row">
           <div className="col-lg-8 col-md-8 col-sm-12 col-xs-offset-1 main">
             <h1>Welcome To The React World!</h1>
-            {/* <Home /> */}
-            {/* </div>
+            {/*
+            <Home />
+             </div>
         </div> 
 
              <div className="row">
           <div className="col-xs-10 col-xs-offset-1"> */}
 
-            <Home name={"MaXx"} initialAge={20} initialStatus={0} user={user}>
+            <Home
+              greet={this.onGreet}
+              name={"MaXx"}
+              initialAge={20}
+              initialStatus={0}
+              user={user}
+            >
               <p>this is a paragraph</p>
             </Home>
           </div>
