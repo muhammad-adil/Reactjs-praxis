@@ -1,29 +1,30 @@
-import React from "react";
+import React, { Component } from "react";
 import PropTypes from "prop-types";
 
-export class Home extends React.Component {
+export class Home extends Component {
   constructor(props) {
     super(props);
     this.state = {
       age: props.initialAge,
-      status: 0
+      status: props.initialStatus
     };
   }
 
   onMakeOlder() {
     this.setState({
-      age: this.state.age + 3
+      age: this.state.age + 3,
+      status: this.state.status + 1
     });
-    //this.age += 3;
-    console.log(this.state.age);
+    console.log("Age :", this.state.age);
+    console.log("Status :", this.state.status);
   }
 
   render() {
-    var text = "Something";
+    var text = "React Something";
     //console.log(this.props);
     return (
-      <div>
-        <b>{text}</b>
+      <div className="main-content">
+        <b>Simple text from variable {text}</b>
         <p>
           I am new Home coponent, my name is {this.props.name} and my age
           is&nbsp;
@@ -58,7 +59,7 @@ export class Home extends React.Component {
 
 Home.propTypes = {
   name: React.PropTypes.string,
-  initialAge: React.PropTypes.number
-  // user: React.PropTypes.object,
-  // children: React.PropTypes.element.isRequired
+  initialAge: React.PropTypes.number.isRequired,
+  user: React.PropTypes.object,
+  children: React.PropTypes.element.isRequired
 };
