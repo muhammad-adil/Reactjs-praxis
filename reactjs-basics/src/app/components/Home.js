@@ -6,7 +6,8 @@ export class Home extends Component {
     super(props);
     this.state = {
       age: props.initialAge,
-      status: props.initialStatus
+      status: props.initialStatus,
+      homeLink: "Changed Link"
     };
   }
 
@@ -17,6 +18,10 @@ export class Home extends Component {
     });
     console.log("Age :", this.state.age);
     console.log("Status :", this.state.status);
+  }
+
+  onChangeLink() {
+    this.props.changeLink(this.state.homeLink);
   }
 
   render() {
@@ -39,6 +44,13 @@ export class Home extends Component {
         </button>&nbsp;
         <button onClick={this.props.greet} className="btn btn-primary btn-sm">
           Don't Touch
+        </button>
+        &nbsp;
+        <button
+          onClick={this.onChangeLink.bind(this)}
+          className="btn btn-primary btn-sm"
+        >
+          Change Header Link
         </button>
         {/*  props work*/}
         <p>

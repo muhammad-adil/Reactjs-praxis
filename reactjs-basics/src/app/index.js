@@ -8,9 +8,22 @@ import { Sidebar } from "./components/Sidebar";
 import { Footer } from "./components/Footer";
 
 class App extends React.Component {
+  constructor() {
+    super();
+    this.state = {
+      homeLink: "Home4change"
+    };
+  }
   onGreet() {
     alert("Hello From Papa Parent Component");
   }
+
+  onChangeLinkName(newName) {
+    this.setState({
+      homeLink: newName
+    });
+  }
+
   render() {
     var user = {
       name: "Anna",
@@ -21,7 +34,7 @@ class App extends React.Component {
       <div className="container">
         <div className="row">
           <div className="col-lg-12 col-md-12 col-sm-12 header">
-            <Header />
+            <Header homeLink={this.state.homeLink} />
           </div>
         </div>
 
@@ -42,6 +55,7 @@ class App extends React.Component {
               initialAge={20}
               initialStatus={0}
               user={user}
+              changeLink={this.onChangeLinkName.bind(this)}
             >
               <p>this is a paragraph</p>
             </Home>
