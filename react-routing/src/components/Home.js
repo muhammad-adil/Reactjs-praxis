@@ -1,6 +1,6 @@
 import React from "react";
 import movies from "../movies.json";
-import FeaturedMovie from "./FeatureMovie";
+import FeaturedMovie from "./FeaturedMovie";
 
 const Home = () => {
   const topFour = movies.slice(0, 4);

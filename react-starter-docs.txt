@@ -44,13 +44,16 @@ learn ={
 7. componentWillUnmount			immediately before removing component from DOM
 
 
-
-
-
 Routing
 
 https://css-tricks.com/learning-react-router/
 https://css-tricks.com/react-router-4/
 
 
+
+npm install --save react-router-dom
+
+<BrowserRouter>: Keeps UI in sync with the browser history.
+<Link>: Provides declarative navigation around the application.
+<Match>: Renders UI when the pattern matches the location.
 
