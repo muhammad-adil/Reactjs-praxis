@@ -40,7 +40,6 @@ const Movie = ({ params: { movieId } }) => {
               {review.title}
               <span classname="review-author"> by{review.author}</span>
             </h3>
-
             <p>{review.body}</p>
           </div>
         ))}
@@ -48,9 +47,7 @@ const Movie = ({ params: { movieId } }) => {
     </div>
   );
 };
-
 // movies: PropTypes.arrayOf(Movie)
-
 Movie.PropTypes = {
   params: PropTypes.shape({
     movieId: PropTypes.string.isRequired

@@ -6,7 +6,9 @@ const Home = () => {
   const topFour = movies.slice(0, 4);
   return (
     <div>
-      <h2 className="featured-movies__header">Featured Movie</h2>
+      <h2 className="featured-movies__header">Home Component</h2>
+      <hr />
+      <h4 className="featured-movies__header">Featured Movie</h4>
       <hr />
 
       <div className="featured-movies">

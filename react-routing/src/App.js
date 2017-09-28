@@ -3,13 +3,13 @@ import logo from "./logo.svg";
 import "./App.css";
 
 import Home from "./components/Home";
-import Movie from "./components/Movie";
 import Movies from "./components/Movies";
+import Movie from "./components/Movie";
 import PageNotFound from "./components/PageNotFound";
 
 import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
 
-class App extends Component {
+export default class App extends Component {
   render() {
     return (
       <Router>
@@ -31,17 +31,17 @@ class App extends Component {
                 </Link>
               </li>
 
-              <li className="nav-item">
+              {/* <li className="nav-item">
                 <Link className="nav-link active" to="/" />
-              </li>
+              </li> */}
             </ul>
           </header>
 
           <div className="container">
             <Switch>
               <Route exact path="/" component={Home} />
-              <Route strict path="/movies" component={Movies} />
-              <Route path="/movies/:id" component={Movie} />
+              <Route strict path="/Movies" component={Movies} />
+              <Route exact path="/Movies/:id" component={Movie} />
               <Route component={PageNotFound} />
             </Switch>
           </div>
@@ -50,5 +50,3 @@ class App extends Component {
     );
   }
 }
-
-export default App;
