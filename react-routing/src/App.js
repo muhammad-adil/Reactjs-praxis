@@ -24,10 +24,15 @@ class App extends Component {
                   Home
                 </Link>
               </li>
+
               <li className="nav-item">
-                <Link className="nav-link" to="/movies">
+                <Link className="nav-link" to="/Movies">
                   Movies
                 </Link>
+              </li>
+
+              <li className="nav-item">
+                <Link className="nav-link active" to="/" />
               </li>
             </ul>
           </header>
@@ -36,7 +41,7 @@ class App extends Component {
             <Switch>
               <Route exact path="/" component={Home} />
               <Route strict path="/movies" component={Movies} />
-              <Route strict path="/movies/:id" component={Movie} />
+              <Route path="/movies/:id" component={Movie} />
               <Route component={PageNotFound} />
             </Switch>
           </div>
