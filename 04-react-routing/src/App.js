@@ -1,22 +1,25 @@
 import React, { Component } from "react";
+import { Router, Route, Link, Switch } from "react-router-dom";
+import { createBrowserHistory as createHistory } from 'history'
+
 import logo from "./logo.svg";
-import "./App.css";
+import './css/App.css';
 
 import Home from "./components/Home";
 import Movies from "./components/Movies";
 import Movie from "./components/Movie";
 import PageNotFound from "./components/PageNotFound";
 
-import { BrowserRouter as Router, Route, Link, Switch } from "react-router-dom";
-
 export default class App extends Component {
   render() {
+    // eslint-disable-next-line
+    const history: History = createHistory()
+
     return (
-      <Router>
+      <Router history={history}>
         <div className="App">
           <header className="App-header">
             <img src={logo} className="App-logo" alt="logo" />
-
             <h1 className="App-title">Movie Routing App</h1>
             <ul className="nav justify-content-center">
               <li className="nav-item">
@@ -30,10 +33,6 @@ export default class App extends Component {
                   Movies
                 </Link>
               </li>
-
-              {/* <li className="nav-item">
-                <Link className="nav-link active" to="/" />
-              </li> */}
             </ul>
           </header>
 
