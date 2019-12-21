@@ -1,14 +1,5 @@
 // history.js
 
-// import { createBrowserHistory } from "history";
-// export default createBrowserHistory();
- 
-import createBrowserHistory from 'history/createBrowserHistory'
+import { createBrowserHistory } from "history";
 
-require("history").createBrowserHistory;
-
-
-export default createBrowserHistory()
-
-// import { createHashHistory } from "history";
-// export default createHashHistory(); 
+export default createBrowserHistory(); 

@@ -1,9 +1,10 @@
 import React from "react";
 import PropTypes from "prop-types";
-import { BrowserRouter as Router, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+// BrowserRouter as Router,
+// import Link from 'react-router/Link';
 
 const FeaturedMovie = ({ movie }) => (
-  <Router>
     <div className="featured-movie">
       <div className="featured-movie__image">
         <Link to={`/movies/${movie.id}`}>
@@ -19,7 +20,6 @@ const FeaturedMovie = ({ movie }) => (
         <p>{movie.released}</p>
       </div>
     </div>
-  </Router>
 );
 
 FeaturedMovie.PropTypes = {

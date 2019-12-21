@@ -1,28 +1,26 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import { BrowserRouter, Route } from "react-router-dom"; // BrowserRouter
+import { BrowserRouter as Router } from "react-router-dom"; // BrowserRouter
 
 // import history from "./history";
-
-import './css/index.css'
 import App from "./App";
-
 import registerServiceWorker from "./registerServiceWorker";
 
 // <App />
-// history={history}
+  // {/* <Route path="/" component={App} /> */}
+  // history={history}
 
 ReactDOM.render(  
-  <BrowserRouter>
-    <Route path="/" component={App} />
-  </BrowserRouter>,
+  // <BrowserRouter history={history}>
+  //   <App />
+  // </BrowserRouter>,
+
+    // {/* <Route path="/" component={App} /> */}
+
+
+<Router>
+    <App />
+  </Router>,
   document.getElementById("root")
 );
-// const AppContainer = () => (
-//   <Router history={history}>
-//       <Provider store={store}>
-//            <Route path="/" component={App} />
-//       </Provider>
-//   </Router>
-// );
 registerServiceWorker();
