@@ -17,18 +17,21 @@ function TodoForm({ addTodo }){
     function handleSubmit(e){
       e.preventDefault();
         if(todo.task.trim()){
-            addTodo({ ...todo, id: uuid.v4() })
+            addTodo({ ...todo, id: uuid.v4() });
+
+            // Reset task input
+            setTodo({ ...todo, task: "" });
         }
     }
 
     return(
-        <form>
+        <form onSubmit={handleSubmit}>
             <input
                 name="task" 
                 type="text" 
                 value={todo.task} 
                 onChange={ handleTaskInputChange }/>
-            <button type="submit" />
+            <button type="submit">Submit</button>
         </form>
     )
 }

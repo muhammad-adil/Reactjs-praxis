@@ -2,6 +2,7 @@ import React, { useState } from 'react'; // useState is a function, takes initia
 import logo from './logo.svg';
 import './App.css';
 import TodoForm from "./components/TodoForm";
+import TodoList from "./components/TodoList";
 
 function App() {
   const [todos, setTodos] =  useState([]); // first item is state itself, 2nd is function used to update state, because todo state is immutable.
@@ -16,6 +17,7 @@ function App() {
         <img src={logo} className="App-logo" alt="logo" />
         <h2>React Todo App</h2>
         <TodoForm addTodo={addTodo} />
+        <TodoList todos={ todos } />
       </header>
     </div>
   );
