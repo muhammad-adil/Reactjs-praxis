@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
+import Typography from "@material-ui/core/Typography";
 
 const LOCAL_STORAGE_KEY = "react-todo-list-todos";
 
@@ -45,12 +46,12 @@ function App() {
   
   return (
     <div className="App">
-      <header className="App-header">
+      {/* <header className="App-header"> */}
         <img src={logo} className="App-logo" alt="logo" />
-        <h2>React Todo App</h2>
+        <Typography variant="h1" style={{ padding: 16 }}>React Todo App</Typography>
         <TodoForm addTodo={addTodo} />
         <TodoList todos={ todos } toggleComplete={toggleComplete} removeTodo={removeTodo} />
-      </header>
+      {/* </header> */}
     </div>
   );
 }
