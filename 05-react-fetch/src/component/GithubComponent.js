@@ -14,6 +14,7 @@ constructor(props){
 }
 
   componentDidMount(){
+    // let ava_img = this.githubData.avatar_url
     // eslint-disable-next-line
     fetch(urlForUsername(this.props.username))
     .then(response => {
@@ -24,9 +25,12 @@ constructor(props){
     })
     .then(d => d.json())
     .then(d => {
+      this.ava_img = d.avatar_url;
+      console.log(this.ava_img)
       this.setState({
         githubData : d
       })
+      console.log("Data", this.state.githubData, this.props)
       // eslint-disable-next-line
     }),
      () => {
@@ -43,20 +47,25 @@ constructor(props){
     
     return (
       <div className="App">
-          <h2>{this.state.githubData.name}</h2>
-          <img src="this.state.githubData.avatar_url" alt="avatar"/>
-          {/* <svg width="90" height="90">       
-            <image xlink:href="this.state.githubData.avatar_url" src="" width="90" height="90"/>    
+          <h2>{"this.state.githubData.name"}</h2>
+          <div><img src={"this.state.githubData.avatar_url"} alt="avatar_url" /> </div>
+          <div><img src={'this.ava_img'} alt="avatar_url" /> </div>
+
+          {/* <img src={"this.state.githubData.avatar_url"} alt="avatar_url" />  
+          <svg width="90" height="90">       
+            <image xlink:href="this.state.githubData.avatar_url" src="this.state.githubData.avatar_url" width="90" height="90"/>    
           </svg> */}
 
           <h5>Bio: &nbsp;{this.state.githubData.bio}</h5>
-          <date>Created at: &nbsp;{this.state.githubData.created_at}</date>
+          <b>Created at: &nbsp;{this.state.githubData.created_at}</b>
           <br/>
-          <number>Followers: &nbsp;{this.state.githubData.followers}</number>
+          <b>Followers: &nbsp;{this.state.githubData.followers}</b>
           <br/>
-          <address>Location: &nbsp;{this.state.githubData.location}</address>
+          <address>
+            Location: &nbsp;{this.state.githubData.location}
+          </address>
           <br/>
-          <url>Url: &nbsp;{this.state.githubData.url}</url>
+          <q>Url: &nbsp;{this.state.githubData.url}</q>
 
         <p className="App-intro"></p>
       </div>
