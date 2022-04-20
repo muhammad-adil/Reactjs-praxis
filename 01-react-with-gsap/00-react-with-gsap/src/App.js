@@ -15,10 +15,10 @@ function App() {
     // console.log(logoItem);
     gsap.to(logoItem, {
       opacity: 1,
-      duration: 3,
+      duration: 2,
       y: -50,
       ease: Power3.easeOut,
-      rotation: 111
+      rotation: "+=360"
     });
     gsap.to(textItem, {
       opacity: 1,
