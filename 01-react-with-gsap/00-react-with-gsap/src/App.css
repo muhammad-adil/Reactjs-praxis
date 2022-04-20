@@ -25,6 +25,10 @@
   color: white;
 }
 
+.caption,
+.App-link {
+  opacity: 0;
+}
 .App-link {
   color: #61dafb;
 }
