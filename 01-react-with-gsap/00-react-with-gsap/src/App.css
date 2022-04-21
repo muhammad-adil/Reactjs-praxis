@@ -41,3 +41,29 @@
     transform: rotate(360deg);
   }
 }
+
+.circle-container {
+  background-color: #1b2230;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+}
+
+.circle {
+  width: 75px;
+  height: 75px;
+  border-radius: 100%;
+  background-color: #fdcf50;
+  margin: 50px;
+}
+.circle.red {
+  background-color: #fd5151;
+}
+.circle.blue {
+  background-color: #3617c4;
+}
+.circle.green {
+  background-color: #28be02;
+}

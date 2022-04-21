@@ -69,6 +69,12 @@ function App() {
           Learn React
         </a>
       </header>
+      <section className="circle-container">
+        <div className="circle yellow"></div>
+        <div className="circle red"></div>
+        <div className="circle blue"></div>
+        <div className="circle green"></div>
+      </section>
     </div>
   );
 }
