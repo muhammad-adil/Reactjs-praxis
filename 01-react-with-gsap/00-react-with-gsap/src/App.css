@@ -45,12 +45,15 @@
 .circle-container {
   background-color: #1b2230;
   min-height: 100vh;
+}
+
+.circle-box-visible {
+  visibility: hidden;
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: center;
 }
-
 .circle {
   width: 75px;
   height: 75px;
