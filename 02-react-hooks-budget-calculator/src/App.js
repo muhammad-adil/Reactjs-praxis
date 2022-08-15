@@ -26,16 +26,46 @@ const initialExpenses = [
 // console.log(initialExpenses);
 function App() {
   const [expenses, setExpenses] = useState(initialExpenses);
-  console.log("1", expenses, setExpenses);
+  const [charge, setCharge] = useState("");
+  const [amount, setAmount] = useState("");
+
+  // console.log("1", expenses, setExpenses);
+
+  const handleCharge = (e) => {
+    console.log(`Charge : ${e.target.value}`);
+    setCharge(e.target.value);
+  };
+  const handleAmount = (e) => {
+    console.log(`Amount : ${e.target.value}`);
+    setAmount(e.target.value);
+  };
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  };
 
   return (
     <>
-      <div className="App">
-        <h1>Hello React</h1>
-        <Alert />
-        <ExpenseForm />
-        <ExpenseList />
-      </div>
+      <Alert />
+      <h1>Budget Calculator</h1>
+      <main className="App">
+        <ExpenseForm
+          charge={charge}
+          amount={amount}
+          handleCharge={handleCharge}
+          handleAmount={handleAmount}
+          handleSubmit={handleSubmit}
+        />
+        <ExpenseList expenses={expenses} />
+      </main>
+      <h2>
+        Total spending :{" "}
+        <span className="total">
+          &euro; {""}
+          {expenses.reduce((acc, curr) => {
+            return (acc += curr.amount);
+          }, 0)}
+        </span>
+      </h2>
     </>
   );
 }

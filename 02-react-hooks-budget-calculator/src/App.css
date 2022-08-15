@@ -16,11 +16,12 @@ body {
   color: var(--mainBlack);
   font-family: "Roboto", sans-serif;
 }
-h1 {
+h1,
+h2 {
   text-align: center;
   text-transform: capitalize;
   margin: 2rem 0;
-  color: var(--mainGrey);
+  color: var(--mainWhite);
   letter-spacing: 5px;
 }
 .App {
