@@ -55,9 +55,26 @@ function App() {
       setAmount("");
     } else {
       // handleAlert call
+      handleAlert({
+        type: "danger",
+        text: "Charge can not be empty value and amount value has to be bigger than zero",
+      });
     }
   };
 
+  // Edit item
+  const handleEditItem = (id) => {
+    console.log("Edit item:", id);
+  };
+  // Delete item
+  const handleDeleteItem = (id) => {
+    console.log("Delete item:", id);
+  };
+  // Clear all Items
+  const clearAllItems = () => {
+    console.log("Cleared all Items");
+    setExpenses([]);
+  };
   return (
     <>
       {alert.show && <Alert type={alert.type} text={alert.text} />}
@@ -71,7 +88,12 @@ function App() {
           handleAmount={handleAmount}
           handleSubmit={handleSubmit}
         />
-        <ExpenseList expenses={expenses} />
+        <ExpenseList
+          expenses={expenses}
+          handleEditItem={handleEditItem}
+          handleDeleteItem={handleDeleteItem}
+          clearAllItems={clearAllItems}
+        />
       </main>
       <h2>
         Total spending :{" "}
