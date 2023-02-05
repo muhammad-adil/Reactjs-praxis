@@ -7,9 +7,15 @@ import { ExpenseForm } from "./components/Expense/ExpenseForm";
 import { Alert } from "./components/Alert";
 //
 //
+// let initialExpenses = undefined;
+// try {
 const initialExpenses = localStorage.getItem("expenses")
   ? JSON.parse(localStorage.getItem("expenses"))
   : [];
+// } catch (err) {
+//   console.log("Error: ", err.message);
+// }
+
 //
 // const initialExpenses = [
 //   {
@@ -32,12 +38,31 @@ const initialExpenses = localStorage.getItem("expenses")
 // ------------------------------------------------------------------
 //
 function App() {
+  //
+  //
+  //
+  //
+  // let initialExpenses = undefined;
+  // const value = undefined;
+
+  // try {
+  //   initialExpenses = localStorage.getItem("expenses") ? JSON.parse(value) : []; // JSON.parse(localStorage.getItem("expenses"))
+  //   const result = JSON.parse(value);
+  //   console.log(result);
+  // } catch (err) {
+  //   // 👇️ This runs
+  //   console.log("Error: ", err.message);
+  // }
+  //
+  //
   const [expenses, setExpenses] = useState(initialExpenses);
   const [charge, setCharge] = useState("");
   const [amount, setAmount] = useState("");
   const [alert, setAlert] = useState({ show: false });
   const [edit, setEdit] = useState(false);
   const [id, setId] = useState(0);
+
+  //
   //
   useEffect(() => {
     console.log("UseEffect called");
@@ -50,7 +75,8 @@ function App() {
   };
 
   const handleAmount = (e) => {
-    setAmount(e.target.value);
+    let amount = e.target.value;
+    // setAmount(e.target.value);
     if (amount === "") {
       setAmount(amount);
     } else {
@@ -93,8 +119,6 @@ function App() {
 
   // Edit item
   const handleEditItem = (id) => {
-    console.log("Edit item:", id);
-    //
     let expense = expenses.find((item) => item.id === id);
     let { charge, amount } = expense;
     setCharge(charge);
@@ -104,22 +128,19 @@ function App() {
   };
   // Delete item
   const handleDeleteItem = (id) => {
-    // console.log("Delete item:", id);
-    //
     let tempExpenses = expenses.filter((item) => item.id !== id);
     setExpenses(tempExpenses);
     handleAlert({ type: "danger", text: "item deleted" });
   };
   // Clear all Items
   const clearAllItems = () => {
-    // console.log("Cleared all Items");
     setExpenses([]);
     handleAlert({ type: "danger", text: "All items cleared" });
   };
   return (
     <>
       {alert.show && <Alert type={alert.type} text={alert.text} />}
-      <Alert />
+      {/* <Alert /> */}
       <h1>Budget Calculator</h1>
       <main className="App">
         <ExpenseForm
