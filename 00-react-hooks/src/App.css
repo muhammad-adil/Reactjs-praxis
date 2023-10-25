@@ -98,11 +98,11 @@ header p a:hover {
 .card {
   width: 30.3333333333%;
   margin: 1%;
-  padding: 30px;
+  padding: 15px;
   border-radius: 8px;
   position: relative;
   transition: 0.3s all;
-  box-shadow: 0 2px 5px 0 rgba(3, 6, 26, 0.15);
+  box-shadow: 0 11px 11px 5px rgba(3, 6, 26, 0.15);
 }
 .card:hover {
   transform: scale(1.05);
