@@ -89,10 +89,11 @@ header p a:hover {
 
 .content {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
   justify-content: center;
   flex-wrap: wrap;
   padding: 40px 0;
+  width: 100%;
 }
 
 .card {
@@ -103,6 +104,7 @@ header p a:hover {
   position: relative;
   transition: 0.3s all;
   box-shadow: 0 11px 11px 5px rgba(3, 6, 26, 0.15);
+  min-height: 250px;
 }
 .card:hover {
   transform: scale(1.05);
