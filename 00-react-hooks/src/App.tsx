@@ -25,7 +25,7 @@ function App() {
         </div>
         {/*  */}
         {/* React useEffectMore Hook*/}
-        <h2 className="glow">React useEffect More Hook Work</h2>
+        <h2 className="glow">React useEffect Only Once render Work</h2>
         <div className="content">
           <UseEffectHookMore />
         </div>
