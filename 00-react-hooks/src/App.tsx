@@ -1,8 +1,9 @@
 import React from "react";
-import logo from "./logo.svg";
 import "./App.css";
 //
 import UseStateHook from "./components/01-use-state";
+import UseEffectHook from "./components/02-useEffect";
+
 function App() {
   return (
     <div className="App">
@@ -16,7 +17,9 @@ function App() {
         {/*  */}
         {/* React useEffect Hook*/}
         <h2 className="glow">React useEffect Hook</h2>
-        <div className="content">{/* <UseStateHook /> */}</div>
+        <div className="content">
+          <UseEffectHook />
+        </div>
       </div>
     </div>
   );
