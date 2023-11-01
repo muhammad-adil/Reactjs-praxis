@@ -3,10 +3,8 @@ import "./App.css";
 //
 import UseStateHook from "./components/01-use-state";
 import UseEffectHook from "./components/02-useEffect";
-// UseEffectHookMore
 import UseEffectHookMore from "./components/02-useEffect-1";
 
-//
 function App() {
   return (
     <div className="App">
@@ -23,6 +21,7 @@ function App() {
         <div className="content">
           <UseEffectHook />
         </div>
+
         {/*  */}
         {/* React useEffectMore Hook*/}
         <h2 className="glow">React useEffect Only Once render Work</h2>

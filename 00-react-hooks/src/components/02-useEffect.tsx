@@ -9,6 +9,11 @@ function UseEffectHook() {
     console.log("useEffect - Updating document title");
     document.title = `You clicked ${count} times`;
   }, [count]);
+  
+  
+  useEffect(() => {
+    document.title = `You clicked ${count} times`;
+  });
 
   return (
     <>
@@ -20,6 +25,9 @@ function UseEffectHook() {
             onChange={(e) => setName(e.target.value)}
           />
           {/* setCount Button on title */}
+          <button onClick={() => setCount(count + 1)}>
+        <div className="card__content"></div>
+        <div>
           <button onClick={() => setCount(count + 1)}>
             Click {count} times
           </button>
