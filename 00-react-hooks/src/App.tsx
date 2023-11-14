@@ -6,8 +6,7 @@ import UseEffectHook from "./components/02-useEffect";
 import UseEffectHookMouseMove from "./components/02-useEffect-02.1-mouseMove";
 import UseEffectHookMore from "./components/02-useEffect-1";
 
-import UseEffectHookMouseContainer from "./components/02.1-useEffect-02.2-MouseContainer"
-
+// import UseEffectHookMouseContainer from "./components/02.1-useEffect-02.2-MouseContainer"
 function App() {
   return (
     <div className="App">
@@ -29,16 +28,13 @@ function App() {
         {/* React useEffectMore Hook*/}
         <h2 className="glow">React useEffect Only Once render Work</h2>
         <div className="content">
-          <UseEffectHookMouseMove /> 
-          &nbsp;
-          <br />
-          <UseEffectHookMore />
+          {/* <UseEffectHookMore />  */}
         </div>
 
         {/* React UseEffect Hook Mouse Container*/}
         <h2 className="glow">React useEffect Toggle</h2>
         <div className="content">
-          <UseEffectHookMouseContainer />
+          <UseEffectHookMouseMove />
         </div>
       </div>
     </div>

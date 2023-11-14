@@ -6,18 +6,17 @@ function UseEffectHookMore() {
 
   // Mouse Position Checker
   const logMousePosition = (e: { clientX: React.SetStateAction<number>; clientY: React.SetStateAction<number>; }) => {
-    console.log("Mouse event");
+    console.log("Mouse event in UseEffectHookMore");
     setX(e.clientX);
     setY(e.clientY);
   };
 
   // useEffect hook for Once
   useEffect(() => {
-    console.log("useFffect called");
+    console.log("useFffect called in UseEffectHookMore");
     window.addEventListener("mousemove", logMousePosition);
-
     return () => {
-      console.log("Component unmounting code");
+      console.log("Component unmounting code in UseEffectHookMore");
       window.removeEventListener("mousemove", logMousePosition);
     };
   }, []);

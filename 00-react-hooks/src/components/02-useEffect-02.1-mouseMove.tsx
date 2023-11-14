@@ -1,27 +1,14 @@
 import React, { useState, useEffect } from "react";
+// 
+import UseEffectHookMore from "./02-useEffect-1";
 
 function UseEffectHookMouseMove() {
-  const [x, setX] = useState(0);
-  const [y, setY] = useState(0);
+  const [display, setDisplay] = useState(true)
 
-  // Mouse Position Checker
-  const logMousePosition = (e: { clientX: React.SetStateAction<number>; clientY: React.SetStateAction<number>; }) => {
-    // console.log("Mouse event");
-    setX(e.clientX);
-    setY(e.clientY);
-  };
-
-  // useEffect hook for Once
-  useEffect(() => {
-    window.addEventListener("mousemove", logMousePosition);
-    return () => {
-      // console.log("Component unmounting code");
-      window.removeEventListener("mousemove", logMousePosition);
-    };
-  }, []);
   return (
     <div>
-      Hooks - X - {x} Y - {y}
+      <button className="button-cst" onClick={()=> setDisplay(!display)}>Toggle Display, Check Console for better understanding of Mount and Unmount of the component</button>
+      {display && <UseEffectHookMore /> }
     </div>
   );
 }
