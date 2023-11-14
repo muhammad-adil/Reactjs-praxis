@@ -1,33 +1,31 @@
 import React, { useState, useEffect } from "react";
 
-function UseEffectHookMore() {
+function UseEffectHookMouseContainer() {
+  const [display, setDisplay] = useState(true)
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
   // Mouse Position Checker
   const logMousePosition = (e: { clientX: React.SetStateAction<number>; clientY: React.SetStateAction<number>; }) => {
-    console.log("Mouse event");
+    // console.log("Mouse event");
     setX(e.clientX);
     setY(e.clientY);
   };
 
   // useEffect hook for Once
   useEffect(() => {
-    console.log("useFffect called");
     window.addEventListener("mousemove", logMousePosition);
-
     return () => {
-      console.log("Component unmounting code");
+      // console.log("Component unmounting code");
       window.removeEventListener("mousemove", logMousePosition);
     };
   }, []);
-
-  
   return (
     <div>
-      Hooks - X - {x} Y - {y}
+      <button onClick={()=> setDisplay(!display)}>Toggle Display</button>
+      {display && <p>Hooks - X - {x} Y - {y}</p> }
     </div>
   );
 }
 
-export default UseEffectHookMore;
+export default UseEffectHookMouseContainer;
