@@ -5,6 +5,7 @@ import UseStateHook from "./components/01-use-state";
 import UseEffectHook from "./components/02-useEffect";
 import UseEffectHookMouseMove from "./components/02-useEffect-02.1-mouseMove";
 import UseEffectHookMore from "./components/02-useEffect-1";
+import IntervalHookCounter from "./components/02.1-IntervalHookCounter";
 
 // import UseEffectHookMouseContainer from "./components/02.1-useEffect-02.2-MouseContainer"
 function App() {
@@ -36,6 +37,16 @@ function App() {
         <div className="content">
           <UseEffectHookMouseMove />
         </div>
+
+
+
+      {/* React UseEffect Hook Mouse Container*/}
+      <h2 className="glow">React useEffect IntervalHookCounter</h2>
+        <div className="content">
+          <IntervalHookCounter />
+        </div>
+
+
       </div>
     </div>
   );
