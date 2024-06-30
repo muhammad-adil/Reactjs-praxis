@@ -4,6 +4,7 @@ import "./App.css";
 import UseStateHook from "./components/01-use-state";
 import UseEffectHook from "./components/02-useEffect";
 import UseEffectHookMouseMove from "./components/02-useEffect-02.1-mouseMove";
+import UseEffectHookMore from "./components/02-useEffect-1";
 
 function App() {
   return (
@@ -27,6 +28,7 @@ function App() {
         <h2 className="glow">React useEffect Only Once render Work</h2>
         <div className="content">
           <UseEffectHookMouseMove />
+          <UseEffectHookMore />
         </div>
       </div>
     </div>
