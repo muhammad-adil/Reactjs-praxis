@@ -14,18 +14,21 @@ const router = createBrowserRouter([
   {
     path: "/",
     element: <Root />,
-  },
-  {
-    path: "use-state",
-    element: <UseStatePage />,
-  },
-  {
-    path: "use-effect-basic",
-    element: <UseEffectBasicPage />,
-  },
-  {
-    path: "use-effect-mouse",
-    element: <UseEffectMousePage />,
+    children: [
+      {
+        path: "use-state",
+        element: <UseStatePage />,
+      },
+      {
+        path: "use-effect-basic",
+        element: <UseEffectBasicPage />,
+      },
+      {
+        path: "use-effect-mouse",
+        element: <UseEffectMousePage />,
+      },
+    
+    ],
   },
 ]);
 

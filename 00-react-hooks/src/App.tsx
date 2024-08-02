@@ -10,11 +10,13 @@ import "./App.css";
 import UseEffectHookMouseMove from "./components/02-useEffect-02.1-mouseMove";
 
 import IntervalHookCounter from "./components/02.1-IntervalHookCounter";
+import Root from "./routes/root";
 
 // import UseEffectHookMouseContainer from "./components/02.1-useEffect-02.2-MouseContainer"
 function App() {
   return (
     <div className="App">
+      <Root/>
       <header className="App-header">React HOOKS 101</header>
       <div className="container">
         
