@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from "react";
 
-function UseEffectHookMore() {
+function UseEffectMouseHook() {
   const [x, setX] = useState(0);
   const [y, setY] = useState(0);
 
@@ -29,4 +29,4 @@ function UseEffectHookMore() {
   );
 }
 
-export default UseEffectHookMore;
+export default UseEffectMouseHook;
